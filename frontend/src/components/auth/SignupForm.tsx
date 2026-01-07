@@ -43,7 +43,7 @@ export default function SignupForm() {
       await signUp.email({
         email,
         password,
-        name: name || undefined,
+        name: name || email.split('@')[0],
       });
       router.push('/chat');
     } catch (err) {
